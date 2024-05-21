@@ -1,3 +1,4 @@
+// Online C compiler to run C program online
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -9,6 +10,18 @@ int insert(int element, int index_no, int a[], int *n){
     a[index_no] = element;
      (*n)++;
 }
+
+int delete(int element, int index_no, int a[], int *n){
+    for(int j = index_no -1 ; j<=*n-1; j++){
+        a[j] = a[j+1];
+    }
+    (*n)--;
+}
+
+int delete(int element, int index_no, int a[]){
+    a[index_no-1] = element
+}
+
 
 int main() {
     int n;
@@ -32,11 +45,17 @@ int main() {
         printf("%d ", a[i]);
         
     }
-    printf("\n");
-     for(int i = 0; i <n; i++){  // Taking input of array
-        printf("%p\n", &a[i]);
+    
+    delete(2,2,a,&n);
+    
+      
+    for(int i = 0; i <n; i++){  // Taking input of array
+        printf("%d ", a[i]);
+        
     }
     
-   
+    update(3, 2, a);   
+
     return 0;
 }
+
